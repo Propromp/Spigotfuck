@@ -25,7 +25,7 @@ dependencies {
     compileOnly("org.spigotmc:spigot:1.16.5-R0.1-SNAPSHOT")
     //maven central
     compileOnly("net.propromp:neocommander:1.5.1")
-    compileOnly("net.propromp:brainfuckkt:1.0")
+    compileOnly("net.propromp:brainfuckkt:1.1")
 }
 
 tasks {
