@@ -23,6 +23,9 @@ dependencies {
     compileOnly("com.destroystokyo.paper:paper-api:1.16.5-R0.1-SNAPSHOT")
     //maven local
     compileOnly("org.spigotmc:spigot:1.16.5-R0.1-SNAPSHOT")
+    //maven central
+    compileOnly("net.propromp:neocommander:1.5.1")
+    compileOnly("net.propromp:brainfuckkt:1.0")
 }
 
 tasks {
@@ -43,9 +46,13 @@ tasks {
         }
     }
     processResources {
-        duplicatesStrategy = DuplicatesStrategy.INCLUDE
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
         from(sourceSets["main"].resources.srcDirs) {
             filter(ReplaceTokens::class,mapOf("version" to version))
         }
+    }
+    create<Copy>("buildPlugin") {
+        from(jar)
+        into("server/plugins/")
     }
 }

@@ -1,3 +1,7 @@
-main:
-version: @version@
-name: ""
+main: net.propromp.spigotfuck.Spigotfuck
+version: 1.0
+name: "Spigotfuck"
+api-version: 1.16
+libraries:
+  - net.propromp:neocommander:1.5.1
+  - net.propromp:brainfuckkt:1.0
